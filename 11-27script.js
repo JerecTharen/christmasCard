@@ -9,6 +9,9 @@ let theInput = document.getElementsByClassName("enterName")[0];
 let niceList = document.getElementsByClassName("niceList")[0];
 let naughtyList = document.getElementsByClassName("naughtyList")[0];
 let container = document.getElementsByClassName("container")[0];
+let pics = document.getElementsByClassName("pics")[0];
+
+let allPics = [];
 
 function naughtyNice(name){
     if (name.slice(0,2) === "C:\\"){
@@ -42,10 +45,13 @@ function changeDOM(){
             naughtyList.innterHTML += `<img src="${entered}" alt="an image from the web">`;
         }
         else{
-            naughtyList.innterHTML += `<p>${entered}</p>`;
+            naughtyList.innerHTML += `<p>${entered}</p>`;
         }
     }
     if (alignment === "nice"){
-        
+        console.log("work in progress");
+    }
+    else {
+        console.log("work in progress");
     }
 }
