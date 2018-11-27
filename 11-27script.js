@@ -20,6 +20,12 @@ function naughtyNice(name){
     else if(name.slice(0,2)=== "htt"){
         return "naughty";
     }
+    else if(name.length%2 !== 0){
+        return "nice";
+    }
+    else if(name.length%2 === 0){
+        return "naughty";
+    }
     else if(name.length === 4){
         return "naughty";
     }
@@ -49,9 +55,18 @@ function changeDOM(){
         }
     }
     if (alignment === "nice"){
-        console.log("work in progress");
+        allPics.push("<audio autoplay><source src='nice.wav' type='audio/wav'></audio>");
+        pics.innerHTML = "";
+        for (let i = 0; i < allPics.length; i++){
+            pics.innerHTML += allPics[i];
+        }
     }
     else {
         console.log("work in progress");
+        allPics.push("<audio autoplay><source src='naugty.mp3' type='audio/mp3'></audio>");
+        pics.innerHTML = "";
+        for (let x = 0; x < allPics.length; x++){
+            pics.innerHTML += allPics[x];
+        }
     }
 }
