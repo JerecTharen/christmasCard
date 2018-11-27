@@ -8,6 +8,7 @@ console.log('merry christmas');
 let theInput = document.getElementsByClassName("enterName")[0];
 let niceList = document.getElementsByClassName("niceList")[0];
 let naughtyList = document.getElementsByClassName("naughtyList")[0];
+let container = document.getElementsByClassName("container")[0];
 
 function naughtyNice(name){
     if (name.slice(0,2) === "C:\\"){
@@ -44,5 +45,7 @@ function changeDOM(){
             naughtyList.innterHTML += `<p>${entered}</p>`;
         }
     }
-
+    if (alignment === "nice"){
+        
+    }
 }
