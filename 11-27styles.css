@@ -7,6 +7,8 @@
 .lists div{
     margin: 10px;
     padding: 5px;
+    width: 10%;
+    text-align: center;
 }
 .naughtyList{
     background-color: #ff9999;
