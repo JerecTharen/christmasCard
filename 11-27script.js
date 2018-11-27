@@ -12,6 +12,7 @@ let container = document.getElementsByClassName("container")[0];
 let pics = document.getElementsByClassName("pics")[0];
 
 let allPics = [];
+let names = [];
 
 function naughtyNice(name){
     if (name.slice(0,2) === "C:\\"){
@@ -44,6 +45,8 @@ function changeDOM(){
         }
         else{
             niceList.innerHTML += `<p>${entered}</p>`;
+            allPics.push(`<img src="niceCert.jpg">`);
+            names.push({value: entered,align: alignment});
         }
     }
     else if(alignment === "naughty"){
@@ -52,6 +55,8 @@ function changeDOM(){
         }
         else{
             naughtyList.innerHTML += `<p>${entered}</p>`;
+            allPics.push(`<img src="naughtyCert.png">`);
+            names.push({value: entered,align: alignment});
         }
     }
     if (alignment === "nice"){
@@ -62,8 +67,8 @@ function changeDOM(){
         }
     }
     else {
-        console.log("work in progress");
-        allPics.push("<audio autoplay><source src='naugty.mp3' type='audio/mp3'></audio>");
+        // console.log("work in progress");
+        allPics.push("<audio autoplay><source src='naughty.mp3' type='audio/mp3'></audio>");
         pics.innerHTML = "";
         for (let x = 0; x < allPics.length; x++){
             pics.innerHTML += allPics[x];
