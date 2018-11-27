@@ -60,18 +60,20 @@ function changeDOM(){
         }
     }
     if (alignment === "nice"){
-        allPics.push("<audio autoplay><source src='nice.wav' type='audio/wav'></audio>");
+        // allPics.push("<audio autoplay><source src='nice.wav' type='audio/wav'></audio>");
         pics.innerHTML = "";
         for (let i = 0; i < allPics.length; i++){
             pics.innerHTML += allPics[i];
         }
+        pics.innerHTML += "<audio autoplay><source src='nice.wav' type='audio/wav'></audio>";
     }
     else {
         // console.log("work in progress");
-        allPics.push("<audio autoplay><source src='naughty.mp3' type='audio/mp3'></audio>");
+
         pics.innerHTML = "";
         for (let x = 0; x < allPics.length; x++){
             pics.innerHTML += allPics[x];
         }
+        pics.innerHTML += "<audio autoplay><source src='naughty.mp3' type='audio/mp3'></audio>";
     }
 }
