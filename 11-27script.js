@@ -42,7 +42,7 @@ function changeDOM(){
     }
     else if(alignment === "naughty"){
         if (entered.slice(0,2)=== "htt"){
-            naughtyList.innterHTML += `<img src="${entered}" alt="an image from the web">`;
+            naughtyList.innerHTML += `<img src="${entered}" alt="an image from the web">`;
         }
         else{
             naughtyList.innerHTML += `<p>${entered}</p>`;
