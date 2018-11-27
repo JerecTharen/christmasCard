@@ -45,17 +45,17 @@ function changeDOM(){
         }
         else{
             niceList.innerHTML += `<p>${entered}</p>`;
-            allPics.push(`<img src="niceCert.jpg">`);
+            allPics.push(`<div class="nicePic"><img src="niceCert.jpg"><p class="niceName">${entered}</p></div>`);
             names.push({value: entered,align: alignment});
         }
     }
     else if(alignment === "naughty"){
         if (entered.slice(0,2)=== "htt"){
-            naughtyList.innerHTML += `<img src="${entered}" alt="an image from the web">`;
+            // naughtyList.innerHTML += `<div class="nicePic"><img src="${entered}" alt="an image from the web"><p class="niceName">${entered}</p></div>`;
         }
         else{
             naughtyList.innerHTML += `<p>${entered}</p>`;
-            allPics.push(`<img src="naughtyCert.png">`);
+            allPics.push(`<div class="naughtyPic"><img src="naughtyCert.png"><p class="naughtyName">${entered}</p></div>`);
             names.push({value: entered,align: alignment});
         }
     }

@@ -19,3 +19,19 @@
 img{
     height: 200px;
 }
+.nicePic{
+    position: relative;
+}
+.niceName{
+    position: absolute;
+    top: 90px;
+    left: 110px;
+}
+.naughtyPic{
+    position: relative;
+}
+.naughtyName{
+    position: absolute;
+    top: 100px;
+    left: 110px;
+}
